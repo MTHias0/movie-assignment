@@ -41,17 +41,14 @@ export class DetailsComponent implements OnInit  {
   }
 
   public toggleWatchList(): void {
-    console.log('Toggle Watch List clicked');
     this.isInWatchList() ? 
     this.watchListService.removeFromWatchList(this.movieId) :
     this.watchListService.addToWatchList(this.movieId);
-    console.log('Watch List updated');
   }
 
   public getSafeUrl(): any {
     this.videoId = this.movie.trailer.split('v=')[1]
     const url = `https://www.youtube.com/embed/${this.videoId}`;
-    console.log(url)
     return this.sanitizer.bypassSecurityTrustResourceUrl(url)
     
   }

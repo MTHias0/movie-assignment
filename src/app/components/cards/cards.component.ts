@@ -29,11 +29,9 @@ export class CardsComponent {
 
   public handleMouseEnter(): void {
     this.isHovered = true;
-    console.log(this.isHovered)
   }
 
   public handleMouseLeave(): void {
     this.isHovered = false
-    console.log(this.isHovered)
   }
 }

@@ -39,7 +39,6 @@ ngOnInit(): void {
   this.startTimer();
   this.fixMovieName(this.movies);
   this.setWatchList();
-  console.log(movies)
   this.watchlistUpdatedSubscription = this.watchListService.watchlistUpdated.subscribe(() => {
     this.setWatchList();
   });
