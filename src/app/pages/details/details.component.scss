@@ -1,0 +1,48 @@
+.inner-container {
+    margin-top:5%;
+}
+
+.info-container{
+    max-width: 30%;
+    p{
+        color: #cccccc;
+    }
+} 
+
+.title {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.sub-title {
+    font-size: 18px;
+}
+
+.go-back{
+    display: flex;
+    position: relative;
+    background-color: black;
+    border: none;
+    bottom: 100px;
+    border-radius: 50%;
+    max-width: min-content;
+    padding: 15px;
+    cursor: pointer;
+    color: #FFFFFF;
+}
+
+.watchlist-button {
+    color: #777777;
+    max-width: 20px;
+    font-size: 80%;
+    background-color: black;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.watchlist-button.active {
+    background-color: black;
+    color: #FFFFFF;
+}
+

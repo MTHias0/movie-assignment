@@ -1,0 +1,23 @@
+<div class="cards-container mb-2">
+    <div class="thumbnail-card rounded-bottom">
+      <div class="img-container">
+        <img [routerLink]="['/movie/', movieId]"
+        class="img-fluid mw-100 rounded-top" 
+        src='{{"../../../../../assets/resources/" + title + ".png"}}' 
+        alt="movie-image" 
+      />
+      </div>
+      <div class="info-container">
+        <button
+        class="watchlist-button fa-xl fas fa-bookmark my-4"
+        [class.active]="isInWatchList()"
+        (click)="toggleWatchList()"
+        ></button>
+        <div class="movie-info pt-1 pb-2">
+          <p class="title">{{ title }}</p>
+          <p class="genre">{{ genre }}</p>
+          <p class="rating">Rating: {{ rating }}</p>
+        </div>
+      </div>
+    </div>
+</div>

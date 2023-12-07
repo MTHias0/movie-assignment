@@ -1,0 +1,32 @@
+<div class="details-container">
+    <div class="inner-container d-flex justify-content-around align-items-center">
+        <div class="info-container">
+            <button 
+            [routerLink]="''"
+            class="text-decoration-none go-back fa-3x fas fa-arrow-left"></button>
+            <div class="watchlist-container d-flex row">
+                <p class="title">{{movie.title}}
+                    <button
+                    class="watchlist-button fa-xl mx-3 fas fa-bookmark align-items-start"
+                    [class.active]="isInWatchList()"
+                    (click)="toggleWatchList()"
+                    ></button>
+                </p>
+            </div>
+            <p class="sub-title">{{movie.description}}</p>
+            <p class="sub-title">{{movie.genre}}</p>
+            <p class="sub-title">Duration: {{movie.duration}}</p>
+            <p class="sub-title">Rating: {{movie.rating}}</p>
+            <p class="sub-title">Released: {{movie.release}}</p>
+        </div>
+        <div class="video-container">
+            <iframe
+            width="1500"
+            height="800"
+            [src]="safeUrl"
+            [frameBorder]="0"
+            allowfullscreen
+            ></iframe>
+        </div>
+    </div>
+</div>

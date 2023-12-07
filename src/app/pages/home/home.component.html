@@ -1,0 +1,96 @@
+<div
+  id="carrousel-container"
+  class="w-100 carousel slide"
+  data-ride="carousel-container"
+>
+  <div class="carousel-inner">
+    <div
+      *ngFor="let movie of carrouselMovies; let i = index"
+      class="carousel-item"
+      [class.active]="i === activeIndex"
+      [@fadeInOunt]
+    >
+      <img
+        src="{{ '../../../../../assets/resources/' + movie.title + '.png' }}"
+        class="bg-image d-block w-100"
+        alt="Slide {{ i + 1 }}"
+      />
+      <div class="front-container d-flex justify-content-around">
+        <img
+          src="{{ '../../../../../assets/resources/' + movie.title + '.png' }}"
+          class="front-image position-absolute w-auto"
+          alt="Slide {{ i + 1 }}"
+        />
+        <p class="title position-absolute">{{ movie.title }}</p>
+        <p class="description position-absolute">{{ movie.description }}</p>
+        <button
+          type="button"
+          class="btn btn-secondary position-absolute px-5 py-3"
+          [routerLink]="['/movie/', movie.id]"
+        >
+          Watch Now
+        </button>
+      </div>
+    </div>
+  </div>
+  <a
+    class="bg-secondary py-5 carousel-control-prev"
+    (click)="previous()"
+    role="button"
+    data-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  </a>
+  <a
+    class="bg-secondary py-5 carousel-control-next"
+    (click)="next()"
+    role="button"
+    data-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  </a>
+</div>
+
+<div
+  class="selection-container row d-flex justify-content-center text-center mt-5"
+>
+  <input
+    class="search bg-secondary rounded rounded-pill"
+    type="text"
+    (input)="search()"
+    [(ngModel)]="searchValue"
+    placeholder="Search by title or genre"
+  />
+
+  <div class="cards-container my-5">
+    <p class="movies-title">All Movies</p>
+    <div class="row justify-content-center">
+      <div *ngFor="let movie of movies" class="col-md-2">
+        <app-cards
+          class="d-flex justify-content-center"
+          [movieId]="movie.id"
+          [title]="movie.title"
+          [genre]="movie.genre"
+          [rating]="movie.rating"
+        ></app-cards>
+      </div>
+    </div>
+  </div>
+
+  <div class="watchlist-container my-5">
+    <div *ngIf="watchlist.length">
+      <p class="movies-title">My Watchlist</p>
+      <div class="row justify-content-center">
+        <div *ngFor="let movie of watchlist" class="col-md-2">
+          <app-cards
+            class="d-flex justify-content-center"
+            [movieId]="movie.id"
+            [title]="movie.title"
+            [genre]="movie.genre"
+            [rating]="movie.rating"
+          ></app-cards>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,57 @@
+.bg-image {
+    filter: blur(40px);
+    -webkit-filter: blur(40px);
+    max-height: 1000px;
+}
+
+.front-image {
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    max-height: 80%;
+    border-radius: 10px;
+    border: 2px solid #cccc;
+}
+
+.title {
+    font-size: 64px;
+    color: #FFFFFF;
+    top: 25%;
+    left: 30%;
+    transform: translate(-25%, -30%);
+}
+
+.description {
+    top: 40%;
+    left: 25%;
+    font-size: 36px;
+    color: #FFFFFF;
+    max-width: 30%;
+    transform: translate(-20%, -20%);
+    
+}
+
+.btn {
+    font-size: 36px;
+    color: #FFFFFF;
+    top: 80%;
+    left: 30%;
+    transform: translate(-25%, -20%);
+}
+
+.search {
+    max-width: 20%;
+    height: 40px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.search::placeholder {
+    color: #FFFFFF;
+}
+
+.movies-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-right: 85%;
+}
