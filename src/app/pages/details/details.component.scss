@@ -46,3 +46,65 @@
     color: #FFFFFF;
 }
 
+
+
+@media(max-width:2200px){
+    iframe {
+        width: 1000px;
+        height: 600px;
+    }
+    .inner-container {
+        margin-top:10%;
+    }
+}
+
+@media(max-width:1500px){
+    iframe {
+        width: 800px;
+        height: 400px;
+    }
+
+    .inner-container {
+        margin-top:15%;
+    }
+    
+}
+
+@media(max-width:1220px){
+    iframe {
+        width: 600px;
+        height: 400px;
+    }
+
+    .inner-container {
+        margin-top:20%;
+    }
+    
+}
+
+@media(max-width:1000px){
+    iframe {
+        width: 600px;
+        height: 400px;
+        margin-top:15%;
+        margin-bottom:15%;
+    }
+
+    .inner-container {
+      display: flex;
+      flex-direction: column-reverse;
+      margin-bottom: 10%;
+    }
+
+    .info-container{
+        max-width: 50%;
+    }
+
+    .go-back{
+        position: absolute;
+        top:5%;
+        left: 5%;
+        max-height: 20px;
+    }
+    
+}
