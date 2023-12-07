@@ -26,8 +26,6 @@ export class DetailsComponent implements OnInit  {
 
   ngOnInit(): void {
 
-    this.reload();
-
     this.movieId = this.route.snapshot.paramMap.get('id');
 
     this.movieArr = movies.filter((movie) => {return movie.id === this.movieId});
